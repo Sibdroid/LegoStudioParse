@@ -1,0 +1,39 @@
+BLItemNo,ElementId,LdrawId,PartName,BLColorId,LDrawColorId,ColorName,ColorCategory,Qty,Weight
+"20482,6258831,20482,""Tile, Round 1 x 1 with Bar and Pin Holder"",86,71,Light Bluish Gray,Solid Colors,3,0.16"
+"2555,6030711,2555,""Tile, Modified 1 x 1 with Clip"",86,71,Light Bluish Gray,Solid Colors,2,0.22"
+"26601,6164073,26601,""Wedge, Plate 2 x 2  Cut Corner"",85,72,Dark Bluish Gray,Solid Colors,1,0.5"
+28974,6170810,28974,Minifigure Neck Bracket with Back Stud - Thick Back Wall,86,71,Light Bluish Gray,Solid Colors,1,0
+3004,6004943,3004,Brick 1 x 2,153,321,Dark Azure,Solid Colors,1,0.8
+3005,6225538,3005,Brick 1 x 1,153,321,Dark Azure,Solid Colors,3,0.44
+3008,6377006,3008,Brick 1 x 8,153,321,Dark Azure,Solid Colors,1,0
+3009,6225539,3009,Brick 1 x 6,153,321,Dark Azure,Solid Colors,4,2.42
+3010,6213272,3010,Brick 1 x 4,153,321,Dark Azure,Solid Colors,2,1.64
+3024,4211399,3024,Plate 1 x 1,86,71,Light Bluish Gray,Solid Colors,3,0.2
+3024,4210719,3024,Plate 1 x 1,85,72,Dark Bluish Gray,Solid Colors,1,0.2
+3024,6151664,3024,Plate 1 x 1,153,321,Dark Azure,Solid Colors,3,0.2
+30374,6507886,30374,Bar   4L (Lightsaber Blade / Wand),12,47,Trans-Clear,Transparent Colors,2,0
+"3062,4211090,3062,""Brick, Round  1 x 1"",85,72,Dark Bluish Gray,Solid Colors,1,0.28"
+3068,306826,3068,Tile 2 x 2,11,0,Black,Solid Colors,3,0.48
+3070,4211415,3070,Tile 1 x 1,86,71,Light Bluish Gray,Solid Colors,1,0.16
+3460,6210227,3460,Plate 1 x 8,153,321,Dark Azure,Solid Colors,1,1.36
+35394,6317090,35394,Dish 4 x 4 Inverted (Radar) with Open Stud,86,71,Light Bluish Gray,Solid Colors,1,0
+3622,6154879,3622,Brick 1 x 3,153,321,Dark Azure,Solid Colors,1,1.24
+36841,6248078,36841,Bracket 1 x 1 - 1 x 1,86,71,Light Bluish Gray,Solid Colors,1,0.28
+"4081b,6281998,4081b,""Plate, Modified 1 x 1 with Light Attachment - Thick Ring"",86,71,Light Bluish Gray,Solid Colors,1,0.35"
+4162,6213268,4162,Tile 1 x 8,153,321,Dark Azure,Solid Colors,1,1.06
+"4733,4210700,4733,""Brick, Modified 1 x 1 with Studs on 4 Sides"",85,72,Dark Bluish Gray,Solid Colors,1,0.45"
+54200,4504378,54200,Slope 30 1 x 1 x 2/3,85,72,Dark Bluish Gray,Solid Colors,2,0.21
+"60478,4515369,60478,""Plate, Modified 1 x 2 with Bar Handle on End"",86,71,Light Bluish Gray,Solid Colors,2,0.55"
+61409,6092111,61409,Slope 18 2 x 1 x 2/3 with Grille,86,71,Light Bluish Gray,Solid Colors,2,0.3
+"4073,6240214,4073,""Plate, Round 1 x 1"",14,33,Trans-Dark Blue,Transparent Colors,3,0.12"
+"4073,4211525,4073,""Plate, Round 1 x 1"",86,71,Light Bluish Gray,Solid Colors,3,0.12"
+"4073,6240218,4073,""Plate, Round 1 x 1"",18,38,Trans-Neon Orange,Transparent Colors,4,0.12"
+"4073,6240216,4073,""Plate, Round 1 x 1"",19,46,Trans-Yellow,Transparent Colors,4,0.12"
+"4073,6208450,4073,""Plate, Round 1 x 1"",17,36,Trans-Red,Transparent Colors,2,0.12"
+"85861,6168647,85861,""Plate, Round 1 x 1 with Open Stud"",86,71,Light Bluish Gray,Solid Colors,2,0.1"
+"87087,6004938,87087,""Brick, Modified 1 x 1 with Stud on Side"",153,321,Dark Azure,Solid Colors,7,0.45"
+92946,6069164,92946,Slope 45 2 x 1 with 2/3 Cutout,85,72,Dark Bluish Gray,Solid Colors,1,0.42
+"98138,6258607,98138,""Tile, Round 1 x 1"",17,36,Trans-Red,Transparent Colors,1,0.11"
+,,,,,,,,,
+Total qty,Total Weight,,,,,,,,
+72,32.44001,,,,,,,,
