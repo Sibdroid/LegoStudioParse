@@ -1,0 +1,9 @@
+BLItemNo,ElementId,LdrawId,PartName,BLColorId,LDrawColorId,ColorName,ColorCategory,Qty,Weight
+30374,6507886,30374,Bar   4L (Lightsaber Blade / Wand),12,47,Trans-Clear,Transparent Colors,1,0
+3068,306826,3068,Tile 2 x 2,11,0,Black,Solid Colors,2,0.48
+4733,4210700,4733,"Brick, Modified 1 x 1 with Studs on 4 Sides",85,72,Dark Bluish Gray,Solid Colors,1,0.45
+87087,6004938,87087,"Brick, Modified 1 x 1 with Stud on Side",153,321,Dark Azure,Solid Colors,1,0.45
+98138,6258607,98138,"Tile, Round 1 x 1",17,36,Trans-Red,Transparent Colors,1,0.11
+,,,,,,,,,
+Total qty,Total Weight,,,,,,,,
+6,1.97,,,,,,,,
