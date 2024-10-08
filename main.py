@@ -15,7 +15,13 @@ class AppURLopener(urllib.request.FancyURLopener):
     version = "Mozilla/5.0"
 
 
-def request_price(s: pd.Series) -> str:
+def response_to_avg_price(response: str) -> tuple[str, float]:
+    avg = [i for i in response.split(" ") if "Avg" in i and "Price" in i][0]
+    avg = avg.replace("Price:", "").replace("Avg", "").split(u'\xa0')
+    return (avg[0], float(avg[1]))
+
+
+def request_price(s: pd.Series):
     code, color = s["code"], s["color"]
     link = f"https://www.bricklink.com/catalogPG.asp?P={code}&ColorID={color}"
     print(link)
@@ -26,9 +32,8 @@ def request_price(s: pd.Series) -> str:
     tables = soup.find_all("table", {"class": "fv"})
     new, used = map(lambda x: x.text, tables[1:3])
     with open("data.txt", "a") as file:
-        file.write(new+"\n")
-        file.write("\n")
-        print("done")
+        currency, price = response_to_avg_price(new)
+        file.write(f"{code}, {currency}, {price}\n")
     time.sleep(10)
 
 
@@ -49,8 +54,7 @@ def file_to_human(df_path: str, file_path: str) -> None:
     pass
 
 def main():
-    #parse_details("example-tiny.csv")
-    pass
+    parse_details("example-tiny.csv")
 
 
 if __name__ == "__main__":
