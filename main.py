@@ -1,13 +1,15 @@
 import pandas as pd
-import requests
 from bs4 import BeautifulSoup
 import time
 import urllib.request
+ADJUST_ZERO_PRICE = True
+BUY_NEW = True
 
 
-def parse_series(s: pd.Series) -> tuple[int, str, str] | None:
+def parse_series(s: pd.Series) -> tuple[str, str, str, str] | None:
     if not s.isnull().values.any():
-        return s["BLItemNo"], str(int(s["BLColorId"])), str(int(s["Qty"]))
+        return (s["BLItemNo"], str(int(s["BLColorId"])),
+                s["ColorName"], str(int(s["Qty"])))
     else:
         pass
 
@@ -22,7 +24,9 @@ def response_to_avg_price(response: str) -> tuple[str, float]:
 
 
 def request_price(s: pd.Series):
-    code, color = s["code"], s["color"]
+    code, color, color_name, amount = (s["code"], s["color"],
+                                       s["color_name"], s["amount"])
+    amount = int(amount)
     link = f"https://www.bricklink.com/catalogPG.asp?P={code}&ColorID={color}"
     print(link)
     opener = AppURLopener()
@@ -31,9 +35,15 @@ def request_price(s: pd.Series):
     soup = BeautifulSoup(html, features="lxml")
     tables = soup.find_all("table", {"class": "fv"})
     new, used = map(lambda x: x.text, tables[1:3])
+    if BUY_NEW:
+        response = new
+    else:
+        response = used
     with open("data.txt", "a") as file:
-        currency, price = response_to_avg_price(new)
-        file.write(f"{code}, {currency}, {price}\n")
+        currency, price = response_to_avg_price(response)
+        if not price and ADJUST_ZERO_PRICE:
+            price = 0.01
+        file.write(f"{amount}x {color_name} {code} {price*amount} {currency}\n")
     time.sleep(10)
 
 
@@ -41,7 +51,7 @@ def parse_details(path: str) -> None:
     df = pd.read_csv(path)
     s = df.apply(parse_series, axis=1).dropna()
     df = pd.DataFrame(s, columns = ["main"])
-    columns = ["code", "color", "amount"]
+    columns = ["code", "color", "color_name", "amount"]
     for i, name in enumerate(columns):
         df[name] = [val[i] for val in df["main"]]
     df = df[columns]
